@@ -1,0 +1,25 @@
+[project]
+name = "brainnet-workspace"
+version = "0.1.0"
+description = "Brainnet monorepo - hybrid-adaptive quant trading systems"
+readme = "README.md"
+requires-python = ">=3.10"
+
+# Workspace root - individual packages have their own dependencies
+dependencies = []
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+# Allow packages to reference each other
+brainnet = { workspace = true }
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["shared*"]
+

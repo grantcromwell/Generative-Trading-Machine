@@ -1,0 +1,38 @@
+[project]
+name = "brainnet"
+version = "0.1.0"
+description = "Hybrid-adaptive quant trading system using Phi-3.5-Mini"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langgraph>=0.0.40",
+    "mem0ai>=0.0.20",
+    "pyts>=0.13.0",
+    "yfinance>=0.2.36",
+    "openai>=1.12.0",
+    "requests>=2.31.0",
+    "fastapi>=0.109.0",
+    "uvicorn>=0.27.0",
+    "python-dotenv>=1.0.0",
+    "psycopg2-binary>=2.9.9",
+    "pgvector>=0.2.0",
+    "pillow>=10.2.0",
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "matplotlib>=3.8.0",
+    "click>=8.1.0",
+    "torch>=2.1.0",
+    "torchvision>=0.16.0",
+    "scipy>=1.11.0",
+]
+
+[project.scripts]
+brainnet = "brainnet.services.main:cli"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["brainnet*"]

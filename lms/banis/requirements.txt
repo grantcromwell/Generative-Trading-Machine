@@ -1,0 +1,48 @@
+# ============================================
+# Brainnet/Banis Core Dependencies
+# DeepSeek-V3 via HuggingFace Pipeline
+# ============================================
+
+# Core dependencies
+langgraph>=0.0.40
+mem0ai>=0.0.20
+pyts>=0.13.0
+yfinance>=0.2.36
+openai>=1.12.0
+requests>=2.31.0
+fastapi>=0.109.0
+uvicorn>=0.27.0
+python-dotenv>=1.0.0
+pillow>=10.2.0
+numpy>=1.26.0
+pandas>=2.2.0
+matplotlib>=3.8.0
+click>=8.1.0
+
+# PostgreSQL + pgvector for vector memory storage
+psycopg2-binary>=2.9.9
+pgvector>=0.2.0
+
+# ConvNeXt / Deep Learning (for neural pattern recognition)
+torch>=2.1.0
+torchvision>=0.16.0
+scipy>=1.11.0
+
+# ============================================
+# HuggingFace Pipeline for DeepSeek-V3
+# ============================================
+transformers>=4.40.0
+accelerate>=0.28.0
+huggingface-hub>=0.22.0
+bitsandbytes>=0.43.0  # For 4-bit quantization
+sentencepiece>=0.2.0
+
+# ============================================
+# Training Dependencies (for fine-tuning)
+# ============================================
+# For full training deps: pip install -r requirements-training.txt
+
+# Data processing
+datasketch>=1.6.0  # MinHash deduplication
+datasets>=2.16.0
+

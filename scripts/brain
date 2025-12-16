@@ -1,0 +1,13 @@
+#!/bin/bash
+# 🧠 BRAINNET - One-word launcher
+# Just type: brain
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+MINAH_DIR="$PROJECT_ROOT/lms/minah"
+
+cd "$MINAH_DIR"
+source .venv/bin/activate 2>/dev/null
+
+cd src
+python -m brainnet.services.main gui

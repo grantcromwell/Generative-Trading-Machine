@@ -1,0 +1,8 @@
+# This directory stores ConvNeXt model weights
+# - Pretrained weights are cached here automatically on first run
+# - Fine-tuned weights can be saved here for custom models
+#
+# Example:
+#   predictor = ConvNeXtPredictor()
+#   predictor.save_weights("models/convnext_finetuned.pt")
+

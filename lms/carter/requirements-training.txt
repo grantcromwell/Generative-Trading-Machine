@@ -1,0 +1,87 @@
+# ============================================
+# Brainnet/Minah Training Requirements
+# ============================================
+# 
+# ⚠️  IMPORTANT: Unsloth requires NVIDIA CUDA GPU
+#     Mac users: Use Google Colab for training
+#     See: notebooks/train_phi35_colab.py
+#
+# For Mac (data prep only):
+#   pip install datasets transformers huggingface-hub datasketch
+#
+# For Colab/Cloud GPU:
+#   pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
+#
+# For Linux with RTX 4090:
+#   pip install unsloth
+# ============================================
+
+# Core ML
+torch>=2.1.0
+transformers>=4.36.0
+accelerate>=0.25.0
+bitsandbytes>=0.41.0
+
+# HuggingFace datasets
+datasets>=2.16.0
+huggingface-hub>=0.20.0
+
+# LoRA/PEFT
+peft>=0.7.0
+
+# Training
+trl>=0.7.0
+einops>=0.7.0
+
+# Unsloth (comment out if installing separately)
+# unsloth @ git+https://github.com/unslothai/unsloth.git
+
+# Data processing
+datasketch>=1.6.0  # MinHash
+xxhash>=3.4.0      # Fast hashing
+
+# Tokenization
+sentencepiece>=0.1.99
+tiktoken>=0.5.0
+
+# Evaluation (optional)
+# evaluate>=0.4.0
+# rouge-score>=0.1.2
+
+# Utilities
+tqdm>=4.66.0
+rich>=13.0.0
+typer>=0.9.0
+
+# Logging (optional)
+# wandb>=0.16.0
+# tensorboard>=2.15.0
+
+# ============================================
+# The Stack Dataset Access
+# ============================================
+# You need to accept the terms of use at:
+# https://huggingface.co/datasets/bigcode/the-stack
+#
+# Then login:
+#   huggingface-cli login
+# ============================================
+
+# ============================================
+# Quick Start:
+# ============================================
+# 1. Install deps:
+#    pip install -r requirements-training.txt
+#    pip install unsloth  # or: pip install 'unsloth[colab-new]'
+#
+# 2. Login to HuggingFace:
+#    huggingface-cli login
+#
+# 3. Accept The Stack terms:
+#    https://huggingface.co/datasets/bigcode/the-stack
+#
+# 4. Run training:
+#    python -m brainnet.training.train_phi35 --config 4090
+# ============================================
+
+

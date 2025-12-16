@@ -1,0 +1,17 @@
+#!/bin/bash
+# 🧠 CARTER - Phi-3.5-Vision via NVIDIA NIM for ETHUSDT-PERP Scalping
+# Just type: carter
+#
+# Setup:
+#   1. Get API key at https://build.nvidia.com/
+#   2. export NVIDIA_API_KEY="nvapi-..."
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+CARTER_DIR="$PROJECT_ROOT/lms/carter"
+
+cd "$CARTER_DIR"
+source .venv/bin/activate 2>/dev/null
+
+cd src
+python -m brainnet.services.main gui

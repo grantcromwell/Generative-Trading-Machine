@@ -1,0 +1,72 @@
+# ============================================
+# Brainnet/Banis Training Requirements
+# DeepSeek-V3 Fine-tuning
+# ============================================
+# 
+# ⚠️  IMPORTANT: DeepSeek-V3 is 685B MoE model
+#     Requires significant GPU memory for training
+#     Use LoRA/QLoRA for efficient fine-tuning
+#
+# For inference only (4-bit quantized):
+#   pip install transformers accelerate bitsandbytes
+#
+# For training with LoRA:
+#   pip install peft trl accelerate bitsandbytes
+# ============================================
+
+# Core ML
+torch>=2.1.0
+transformers>=4.40.0
+accelerate>=0.28.0
+bitsandbytes>=0.43.0
+
+# HuggingFace datasets
+datasets>=2.16.0
+huggingface-hub>=0.22.0
+
+# LoRA/PEFT for efficient fine-tuning
+peft>=0.10.0
+
+# Training
+trl>=0.8.0
+einops>=0.7.0
+
+# DeepSpeed for distributed training (optional)
+# deepspeed>=0.14.0
+
+# Data processing
+datasketch>=1.6.0  # MinHash
+xxhash>=3.4.0      # Fast hashing
+
+# Tokenization
+sentencepiece>=0.2.0
+tiktoken>=0.6.0
+
+# Utilities
+tqdm>=4.66.0
+rich>=13.0.0
+typer>=0.9.0
+
+# ============================================
+# Model Access
+# ============================================
+# DeepSeek-V3 on HuggingFace:
+#   https://huggingface.co/deepseek-ai/DeepSeek-V3-0324
+#
+# Login required:
+#   huggingface-cli login
+# ============================================
+
+# ============================================
+# Quick Start:
+# ============================================
+# 1. Install deps:
+#    pip install -r requirements-training.txt
+#
+# 2. Login to HuggingFace:
+#    huggingface-cli login
+#
+# 3. Run training:
+#    python -m brainnet.training.train_deepseek --config 4090
+# ============================================
+

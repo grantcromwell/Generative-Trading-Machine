@@ -1,0 +1,12 @@
+# Packages directory
+# Each subdirectory is an independent model/package with its own:
+#   - src/           Python source code
+#   - tests/         Package-specific tests
+#   - examples/      Usage examples
+#   - pyproject.toml Package configuration
+#
+# To add a new model fork:
+#   mkdir -p packages/my-model/{src/my_model,tests,examples}
+#   cp packages/brainnet/pyproject.toml packages/my-model/
+#   # Edit pyproject.toml with new package name
+
